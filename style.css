@@ -1,0 +1,134 @@
+:root {
+    --cor-primaria: #F5ECE0;
+    --cor-secundaria: #5F99AE;
+    --cor-terciaria: #415E72;
+    --cor-quartenaria: #693382;
+    --cor-hover: #336D82;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: var(--fonte-secundaria);
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+
+    /* Flex layout para coluna */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faz o main crescer e ocupar espaço restante */
+main {
+    flex: 1;
+    padding-bottom: 60px; /* espaço para o footer fixo */
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background-color: var(--cor-secundaria);
+    width: 100%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+    padding: 1% 0 1% 15%;
+}
+
+.cabecalho__menu__link {
+    color: var(--cor-terciaria);
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Apresentação */
+.apresentacao {
+    max-width: 1200px;
+    margin: 5% auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    text-align: center;
+}
+
+.apresentacao__conteudo {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Título */
+.apresentacao__conteudo__titulo {
+    font-size: 36px;
+    font-family: var(--fonte-primaria);
+}
+
+/* Imagem */
+.img_index {
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Texto adicional */
+.apresentacao__conteudo__texto{
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+    text-align: center;
+    
+}
+
+/* Rodapé fixo */
+.rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    padding: 1% 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 10px;
+    z-index: 1000;
+}
+
+/* Responsivo */
+@media (max-width: 100%) {
+    .cabecalho__menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 3% 0;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apresentacao__conteudo {
+        width: 100%;
+    }
+
+    .apresentacao img {
+        width: 70%;
+    }
+}
